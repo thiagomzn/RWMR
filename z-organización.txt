@@ -1,0 +1,26 @@
+________________________________________________BASES DE RWMR________________________________________________
+
+
+
+-----------------------------------Uso de la página-----------------------------
+Principalmente la página tiene varias funciones, unas relacionadas con los profesores y otras con los alumnos.
+
+---Profesores:
+
+--Permitir la creación de mesas de exámenes de forma virtual por parte de un profesor, el cual deberá:
+-Especificar la asignatura del examen.
+-Seleccionar otros dos profesores para asistir durante la evaluación.
+-Especificar la fecha del examen.
+
+--Informarse sobre los alumnos inscritos en sus exámenes.
+
+
+---Alumnos:
+--Permitir que soliciten mesas de exámenes.
+--Permitir que puedan informarse e inscribirse a mesas de exámenes existentes.
+--Informarse sobre las materias de cada año y orientación de la EPET N5.
+
+
+-----------------------Registro en la página-------------------------------
+Durante el registro solamente se solicitará el dni, una contraseña y especificar si el usuario es un docente o un alumno, se comprobará la existencia de la persona en base a la información ya adquirida sobre los alumnos y los profesores de la institución, los cuales estarán registrados en la base de datos, si el dni es el mismo que el que está en la base de datos y la persona realmente cumple el rol que especificó (docente o alumno) entonces se le creará el usuario y se le permitirá el acceso a la página.
+

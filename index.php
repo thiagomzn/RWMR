@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>E.P.E.T. N°5 - Crear mesas</title>
+        <title>E.P.E.T. N°5 - Principal</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -14,7 +14,10 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">E.P.E.T. N°5</a>
+            <a class="navbar-brand ps-3"  href="index.php">
+                <!--<img src="img/LOGO E.P.E.T. 5.png" alt="Logo E.P.E.T. N°5"  width="65" height="70">-->
+                E.P.E.T. N°5
+           </a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -51,7 +54,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="RWMR-C.php">Crear</a>
-                                    <a class="nav-link" href="RWMR-I.php">Inscribirse</a>
+                                    <a class="nav-link" href="........RWMR-I.php">Inscribirse</a>
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Escuela</div>
@@ -68,53 +71,19 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                 <main>
+                <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Crear mesas</h1>
-                        <br>
-                        <br>
-                        <form method="POST">
-<?php
-include ("php/conection.php");
-include ("php/crearmesas.php");
-$curso = $conexion->query("SELECT id, year, division from curso where division = 'A' or division = 'B' or division = 'C' ORDER BY division, year ASC");
-?>
-                                    <div>
-                                        <div class="form-floating mb-3">
-                                            <select class="form-select" name="curso" id="curso">
-                                            <option>Seleccionar</option>
-                                                <?php while($row = $curso->fetch_assoc()){?>
-                                                    <option value="<?php echo $row['id'];?>"><?php echo $row['year']." - ".$row['division'];?></option>
-                                                <?php } ?>
-                                            </select>
-                                            <label>Seleccione el curso</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <select class="form-select" name="nombre" id="nombre">
-                                                    <option>Seleccionar</option>
-                                            </select>
-                                            <label>Seleccione la asignatura</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <input class="form-control" type="date" id="date" name="date">
-                                            <label for="">Fecha:</label>
-                                        </div>
-                                        <br>
-                                            <div class="mt-4 mb-0">
-                                                <div class="d-grid">
-                                                    <input class="btn btn-primary" type="submit" value="Crear mesa" name="cmesa">
-                                                </div>
-                                            </div>
-                                    </div>
-                        </form>
-                        <div id="layoutAuthentication_footer">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Página principal</li>
+                        </ol>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Grupo RWMR</div>
+                            <div class="text-muted">Copyright &copy; RWMR 2024</div>
                             <div>
-                                <a href="https://www.facebook.com/p/EPET-N-5-Fray-Luis-Beltr%C3%A1n-100045363685354/?_rdr">
+                            <a href="https://www.facebook.com/p/EPET-N-5-Fray-Luis-Beltr%C3%A1n-100045363685354/?_rdr">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
                                         <g fill-opacity="0" fill="#dddddd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM37,19h-2c-2.14,0 -3,0.5 -3,2v3h5l-1,5h-4v15h-5v-15h-4v-5h4v-3c0,-4 2,-7 6,-7c2.9,0 4,1 4,1z"></path></g></g>
                                         </svg>
@@ -129,7 +98,7 @@ $curso = $conexion->query("SELECT id, year, division from curso where division =
                     </div>
                 </footer>
             </div>
-        <script src="js/RWMR_C_peticiones.js"></script>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
     </body>

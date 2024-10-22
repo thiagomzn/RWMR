@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">E.P.E.T. N°5 Asignaturas</a>
+            <a class="navbar-brand ps-3" href="index.php">Asignaturas</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -79,8 +79,8 @@ if ($conexion->connect_error) {
 }
 
 if ($result->num_rows > 0) {
-    echo "<h2 class=RWMR-A_h>Primer Ciclo - Áulicas</h2>";
-    echo "<table class= table-pc>";
+    echo "<h2 class= RWMR-A_h >Primer Ciclo - Áulicas</h2>";
+    echo "<table class= table-pc> ";
     echo "<thead><tr><th>Año/división</th><th>Nombre</th></tr></thead>";
     while($fila = $result->fetch_assoc()) {
         echo "<tbody></td><td>".$fila["year"]."</td><td>".$fila["nombre"]."</td></tr></tbody>";
